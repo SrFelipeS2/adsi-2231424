@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic selectors</title>
+    <style>
+        *{
+            border: 1px dotted coral;
+            margin: 10px;
+            padding: 10px;
+        }
+        h2{
+            background-color:coral;
+        }
+        p span {
+            background-color: deepskyblue;
+            margin: 0px;
+            padding: 0px;
+        }
+        .higlight{
+            background-color: lightgreen;
+        }
+        #element03{
+            background-color: mediumslateblue;
+            color: white;
+        }
+        div.box p.first{
+            background-color: teal;
+            color: silver;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>basics selectors</h1>
+    <hr>
+    <h2>Universal selector: *</h2>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, incidunt. Cum voluptates atque maxime facilis nobis illo quae rem veniam omnis explicabo, velit laboriosam dolorem sequi deleniti magni ut debitis?
+        </p>
+    </div>
+    <h2>type/label Universal: h2 </h2>
+    <h2>descending selector: p span </h2>
+    <p>
+        <span>Lorem ipsum dolor</span> sit amet consectetur adipisicing elit. <span>Itaque vel soluta </span>  a officiis minima totam ipsa vero repudiandae maiores libero, molestias placeat expedita exercitationem reprehenderit sint voluptate nemo vitae illum.
+    </p>
+    <h2 class="higlight">class selector: .higlight </h2>
+    <h2>Id selector: #elem03 </h2>
+    <ol>
+        <li id="element01">Element 1</li>
+        <li id="element02">Element 2</li>
+        <li id="element03">Element 3</li>
+        <li id="element04">Element 4</li>
+        <li id="element05">Element 5</li>
+    </ol>
+    <h2>combine selectors: div.box p.first </h2>
+    <div class="box">
+        <p class="first">lorem</p>
+        <p>lorem</p>
+        <p>lorem</p>
+        <p>lorem</p>
+        <p>lorem</p>
+
+    </div>
+
+
+
+
+</body>
+</html>
