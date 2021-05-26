@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { transition: all 0.5s ease-out  } 
+        figure.log{
+            background: url(imgs/snake.png)no-repeat center;
+            height: 200px;
+            width: 200px;
+            transform: scale(0.7);
+            margin: 10px auto;
+        }
+        @media (min-width:720px ){
+            figure.log{transform: scale(1.2);}
+        }
+        @media (min-width:1168px ){
+            figure.log{transform: scale(1.22);}
+        }
+      section.media{
+            margin-left: 90px;
+        }
+        section div.i1{
+            background-size: contain;   
+             background: url(imgs/S4.jpg) no-repeat center;   
+             width: 200px;
+             height: 200px;
+          
+
+        }
+        section div.i2{
+            background: url(imgs/s6.png) no-repeat center;
+            background-size: contain;   
+             width: 200px;
+             height: 200px;
+        }
+        section div.i3{
+            background-size: contain;   
+            background: url(imgs/S4.jpg) no-repeat center;   
+            width: 200px;
+            height: 200px;
+            
+        }
+        section div.i4{
+            background: url(imgs/s6.png) no-repeat center;
+            background-size: contain;   
+             width: 200px;
+             height: 200px;
+              
+        }
+        @media (min-width:720px ){
+            section div.i1,div.i2,div.i3,div.i4{display: inline-block;
+             margin-left: 55px;}
+        }
+        @media (min-width:1168px ){
+            section div.i1,div.i2,div.i3,div.i4{display: inline-block;
+             margin-left: 55px;}
+        }
+        section div.container{
+            height:30px ;
+            width:200px ;
+            background-color: rgb(156, 16, 16);
+            margin-top: 160px;
+            position: absolute;
+        }
+        section div.container a{
+            text-decoration: none;
+            text-align: center;
+            margin: auto 50px;
+            line-height: 30px;
+            position: relative;
+            color: rgb(253, 253, 253);
+        }
+        section div.container:hover{
+            position:absolute;
+            height:60px ;
+            background-color: rgb(16, 156, 63);
+            line-height: 4em;
+            margin-top: 130px;
+        }
+        main section.notices{
+            display: block;
+            margin: 20px auto;
+            border: 2px dashed rgb(245, 161, 6);
+            
+        }
+        main section.notices div.img{
+             background: url(imgs/s8.jpeg) no-repeat center;   
+             width: 200px;
+             height: 200px;
+             margin-left: 90px;
+        }
+        main section.notices article{
+            overflow: scroll;
+            margin: 0px auto;
+             width: 250px;
+             height: 200px; 
+             text-align: center;
+             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        main section.notices1 div.img1{
+            background: url(imgs/s7.jpg) no-repeat center;
+            background-size: contain;   
+             width: 200px;
+             height: 200px;
+             margin-left: 90px;
+
+        }
+        main section.notices1 article{
+            
+            margin: 0px auto;
+             width: 250px;
+             height: 200px; 
+             text-align: center;
+             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        @media (min-width:720px ){
+            main section.notices {
+            width: 465px;
+            margin: 0px auto;
+            }
+             main section.notices article{
+             
+             margin-left: 45px;
+             height: 200px;
+             width: 195px;
+             display: inline-block;  }
+            main section.notices div.img{
+            display: inline-block;   
+             width: 200px;
+             height: 200px;
+             margin-left: 0px;
+             }
+            }
+        @media (min-width:1168px ){
+            main section.notices {
+              width: 980px;
+              margin: 0px auto;
+              margin-left: 144px;
+               }
+            main section.notices article{
+              overflow: unset;
+              margin-left: 45px;
+              height: 300px;
+              width: 500px;
+              text-align: center;
+              display: inline-block;  }
+            main section.notices div.img{
+              display: inline-block;   
+              width: 200px;
+              height: 200px;
+              margin-left: 0px;
+             }
+            }
+            
+    </style>
+</head>
+    <body>
+        <main>
+         <figure class="log"></figure>
+         <section class="media">
+            <div class="i1">
+                <div class="container"><a href="">DANGEROUS</a></div>
+            </div>
+            <div class="i2">
+                <div class="container"><a href="">DANGEROUS</a></div>
+            </div>
+            <div class="i3">
+                <div class="container"><a href="">DANGEROUS</a></div>
+            </div>
+            <div class="i4">
+                <div class="container"><a href="">DANGEROUS</a></div>
+            </div>
+         </section>
+         <section class="notices">
+            <div class="img caja"></div>
+            <article class="caja">
+            <h2>Dangerous Snake</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quod impedit porro quasi magnam quia et praesentium quidem, dicta, tempore nesciunt facere. Ipsam, praesentium repellendus nisi aut repellat assumenda obcaecati asperiores molestias magnam nesciunt veniam atque error labore soluta voluptatibus, expedita ratione nam delectus sed, impedit quae sapiente voluptatem dicta ab? Iusto sint fugiat non ratione fugit rerum aspernatur beatae pariatur aut saepe dignissimos, laudantium optio minus porro! Mollitia, impedit laboriosam tempora fuga voluptatum nihil, veritatis officiis enim consequatur sequi quae quod assumenda itaque ipsa perspiciatis.</p>
+            </article>
+        </section>
+            <section class="notices1 notices" >
+            <div class="img img1 caja"></div>
+            <article class="caja">
+            <h2>Dangerous Snake</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quod impedit porro quasi magnam quia et praesentium quidem, dicta, tempore nesciunt facere. Ipsam, praesentium repellendus nisi aut repellat assumenda obcaecati asperiores molestias magnam nesciunt veniam atque error labore soluta voluptatibus, expedita ratione nam delectus sed, impedit quae sapiente voluptatem dicta ab? Iusto sint fugiat non ratione fugit rerum aspernatur beatae pariatur aut saepe dignissimos, laudantium optio minus porro! Mollitia, impedit laboriosam tempora fuga voluptatum nihil, veritatis officiis enim consequatur sequi quae quod assumenda itaque ipsa perspiciatis.</p>
+            </article>
+        </section>
+         </main>
+    </body>
+</html>
