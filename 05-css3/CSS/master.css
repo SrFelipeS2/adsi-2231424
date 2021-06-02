@@ -1,7 +1,8 @@
+
 body {
     background-color: #5d745a;
-    font: 16px Arial;
     color: #333;
+    font: 16px Arial;
 }
 
 main {
@@ -20,12 +21,21 @@ main h1 {
     padding: 10px;
     text-align: center;
 }
-main h3{
+
+main h2,
+main h3 {
     text-align: center;
 }
+
 h1 span a:link,
-h1 span a:visited{
-color: #fff;
-text-decoration: none;
-float: left;
+h1 span a:visited {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+}
+
+@media (max-width: 580px) {
+    main {
+        width: 345px;
+    }
 }
