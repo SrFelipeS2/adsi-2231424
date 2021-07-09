@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Calculator JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        
+        div.calculadora{
+            background: url(imgs/calculator/fondo.png)no-repeat center;
+            height: 667px;
+            margin: 0px auto 40px auto;
+            position: relative;
+            width: 375px;
+        }
+        div.calculadora nav.modo{
+            left: 157px;
+            position: absolute;
+            top: 19px;
+            width: 120px;
+        }
+        div.calculadora nav.modo a{
+            display: inline-block;
+            height: 28px;
+            transition: transform 0.2s ease-in;
+            width: 31px;           
+        }
+        div.calculadora nav.modo a#modoN:hover{
+            transform: scale(1.1) translate(5px);
+
+        }
+        div.calculadora nav.modo a#modoN{
+            background: url(imgs/calculator/noshe.png) no-repeat center;
+        }
+        div.calculadora div.pantalla{
+            border: 1px red solid;
+           
+        }
+        div.calculadora div.pantalla p#operation{
+        font-weight: 400; 
+        color: seashell;
+        font-size: 18px;
+        margin: 0px;
+            }
+            div.calculadora div.pantalla h4#answer{
+            color: #ffffff ;
+            font-weight: 300;
+            font-size: 200px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator JS 09-challenge-calculator</h1>
+        </header>
+        <section>
+            <div class="calculadora">
+                <nav class="modo">
+                    <a href="javascript:;" id="modoN"></a>
+                    <a href="javascript:;" id="modoD"></a>
+                </nav>
+                <div class="pantalla">
+                    <p class="operation">100+200</p>
+                    <p class="answer">300</p>
+                </div>
+                <nav class="botones">
+                    <ul>
+                        <li id="c"></li>
+                        <li id="division"></li>
+                        <li id="_"></li>
+                        <li id="borrar"></li>
+                        <li id="7"></li>
+                        <li id="8"></li>
+                        <li id="9"></li>
+                        <li id="-"></li>
+                        <li id="4"></li>
+                        <li id="5"></li>
+                        <li id="6"></li>
+                        <li id="+"></li>
+                        <li id="1"></li>
+                        <li id="2"></li>
+                        <li id="3"></li>
+                        <li id="="></li>
+                        <li id="%"></li>
+                        <li id="0"></li>
+                        <li id="."></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+           
+    
+</body>
+</html>

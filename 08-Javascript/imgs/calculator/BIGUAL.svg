@@ -1,0 +1,26 @@
+<svg width="93" height="190" viewBox="0 0 93 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i)">
+<g clip-path="url(#clip0)">
+<path d="M0 0H93V170C93 181.046 84.0457 190 73 190H10C4.47715 190 0 185.523 0 180V0Z" fill="#54C574"/>
+<path d="M53.7109 94.0762H41.4941V91.7178H53.7109V94.0762ZM53.7109 100.155H41.4941V97.8115H53.7109V100.155Z" fill="white"/>
+<path d="M53.7109 94.0762V96.0762H55.7109V94.0762H53.7109ZM41.4941 94.0762H39.4941V96.0762H41.4941V94.0762ZM41.4941 91.7178V89.7178H39.4941V91.7178H41.4941ZM53.7109 91.7178H55.7109V89.7178H53.7109V91.7178ZM53.7109 100.155V102.155H55.7109V100.155H53.7109ZM41.4941 100.155H39.4941V102.155H41.4941V100.155ZM41.4941 97.8115V95.8115H39.4941V97.8115H41.4941ZM53.7109 97.8115H55.7109V95.8115H53.7109V97.8115ZM53.7109 92.0762H41.4941V96.0762H53.7109V92.0762ZM43.4941 94.0762V91.7178H39.4941V94.0762H43.4941ZM41.4941 93.7178H53.7109V89.7178H41.4941V93.7178ZM51.7109 91.7178V94.0762H55.7109V91.7178H51.7109ZM53.7109 98.1553H41.4941V102.155H53.7109V98.1553ZM43.4941 100.155V97.8115H39.4941V100.155H43.4941ZM41.4941 99.8115H53.7109V95.8115H41.4941V99.8115ZM51.7109 97.8115V100.155H55.7109V97.8115H51.7109Z" fill="#0F0F0F"/>
+</g>
+<path d="M1 1H92V170C92 180.493 83.4934 189 73 189H10C5.02944 189 1 184.971 1 180V1Z" stroke="#0F0F0F" stroke-width="2"/>
+</g>
+<defs>
+<filter id="filter0_i" x="0" y="0" width="93" height="193" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="3" operator="erode" in="SourceAlpha" result="effect1_innerShadow"/>
+<feOffset dy="3"/>
+<feGaussianBlur stdDeviation="4.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+<clipPath id="clip0">
+<path d="M0 0H93V170C93 181.046 84.0457 190 73 190H10C4.47715 190 0 185.523 0 180V0Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>
