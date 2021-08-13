@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        section{   
+        position: relative;
+        background: url(imgs/Frame1refframe.png)center no-repeat;
+        margin: 0px auto;
+        height: 868px;
+        width: 386px; 
+    }
+    div h1{
+        height: 75px;
+        width: 345px;
+        text-align: center;
+        padding-top: 20px;  
+        margin: 0px auto;  
+        color: white;
+        font-family: 'Roboto Slab', serif;
+    }
+    div.genero{
+        background: url(imgs/Rectangle\ 2selecgender.png) center no-repeat;
+        width: 345px;
+        height: 294px;
+        padding-top:  150px;
+        margin: 0px auto;
+    }
+    
+    div.genero h3{
+        margin-top: -60px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: white;
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    input#masculino{
+        position: absolute;
+        -webkit-appearance: none;
+        background: url(imgs/male1\ 3.png);
+        width: 159px;
+        height: 157px;
+        margin-top: -316px;
+        margin-left: 28px;
+    }
+    input#masculino:checked{
+        background: url(imgs/imgcheck.png);
+        margin-top: -316px;
+        margin-left: 22px;
+    }
+    input#femenino{
+        position: absolute;
+        -webkit-appearance: none;
+        background: url(imgs/mujer\ 2colegio.png);
+        width: 156px;
+        height: 156px;
+        margin-top: -316px;
+        margin-left: 201px;
+    }
+    input#femenino:checked{
+        background: url(imgs/mujercheck.png);
+        margin-top: -316px;
+        margin-left: 201px;}
+    div.boy{
+        height: 75px;
+        width: 345px;        
+        color: white;
+        margin-left: 70px;
+        margin-top: -160px;
+        font-family: 'Roboto Slab', serif;
+
+    }
+    div.girl{
+        position: absolute;
+        height: 75px;
+        width: 345px;
+        text-align: center;
+        color: white;
+        top: 380px;
+        margin-left: 105px;
+        font-family: 'Roboto Slab', serif;
+    }
+    section h3.name{
+        color: white;
+        margin-left: 30px;
+        margin-top: 30px;
+        font-family: 'Roboto Slab', serif;
+    }
+    input#fullname{
+        position: absolute;
+        background:transparent url(imgs/user.png) center no-repeat;
+        outline: none;
+        border: none;
+        width: 345px;
+        height: 67px;
+        border-radius: 20px;
+        margin-left: 20px; 
+        margin-top: -9px;  
+        text-indent: 50px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 18px;
+    }
+    div.nombre div{
+        background: url(imgs/Verified\ accountuser.png);
+        margin: 12px 8px ;
+        width: 40px;
+        height: 41px;
+
+    }
+    section h3.age{
+        color: white;
+        position: absolute;
+        margin-left: 30px;
+        margin-top: 70px;
+        font-family: 'Roboto Slab', serif;
+    }
+    input#edad{
+        position: absolute;
+        background: url(imgs/agenda.png) center no-repeat;
+        width: 345px;
+        height: 67px; 
+        margin-left: 20px;  
+        margin-top: 97px;
+        text-indent: 50px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 24px;
+        outline: none;
+        border: none;
+    }
+    div.edad div{
+        background: url(imgs/Edit\ Calendarcalender.png);
+        width: 40px;
+        height: 40px;
+        margin: 12px 8px ;
+    }
+    input#verificacion{
+        position: absolute;
+        background: url(imgs/Rectangle\ 7\ verifi.png);
+        width: 345px;
+        height: 70px;   
+        margin-left: 20px;  
+        margin-top: 210px; 
+        border-radius: 30px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 28px;
+        color: white;
+        text-align: center;
+    }
+    input#volver{
+        position: absolute;
+        background: url(imgs/Rectangle\ 7\ verifi.png);
+        width: 345px;
+        height: 70px;   
+        margin-left: 20px;  
+        top: 700px; 
+        border-radius: 30px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 28px;
+        color: white;
+        text-align: center;}
+
+    div.mensaje.colegio
+    {
+        position: absolute;
+        background: url(/imgs/COLEGIO.png) no-repeat center;
+        width: 366px;
+        height: 280px;
+        margin-left: 15px;  
+        top: 450px;
+    }
+    
+    div.mensaje.universidad
+    {
+        position: absolute;
+        background: url(/imgs/UNIVERSIDAD.png) no-repeat center;
+        width: 366px;
+        height: 280px;
+        margin-left: 15px;  
+        top: 450px;
+    }
+    h3.name.ocultar,h3.age.ocultar,input.ocultar,div.ocultar{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <div><h1>
+        please fiill in the true information 
+        </h1></div>       
+        </div>
+        <div class="genero"><h3>choose your gender</h3></div>
+        <input type="checkbox" id="masculino">
+        <input type="checkbox" id="femenino">
+        <div class="boy" id="boy"><h3>BOY</h3></div>
+        <div class="girl" id="girl"><h3>GIRL</h3></div>
+        <h3 class="name" id="name">FULLNAME</h3>
+        <input type="text" id="fullname">
+        <h3 class="age" id="age">BIRTHDAY</h3>
+        <input type="date" id="edad">
+        <input type="button" id="verificacion" value="VERYFY">
+        <div class="mensaje" id="mensaje"></div>
+        <input class="ocultar" type="button" id="volver" value="BACK">
+
+    </section>
+    <script>
+        var fecha = document.getElementById("edad");
+        var boton = document.getElementById("verificacion")
+        var mensaje = document.getElementById("mensaje")
+        var nombre = document.getElementById("name")
+        var edad = document.getElementById("age")
+        var inname = document.getElementById("fullname")
+        var inage = document.getElementById("edad")
+        var back = document.getElementById("volver")
+        var hombre =document.getElementById("masculino")
+        var mujer = document.getElementById("femenino")
+        var texthombre = document.getElementById("boy")
+        var textmujer = document.getElementById("girl")
+
+        const profile = document.querySelectorAll('input[type=checkbox]');   
+        // Events
+        for (let i = 0; i < profile.length; i++) {
+            profile[i].onclick = function() {
+                if(this.checked) {
+                    profile[0].checked = false;
+                    profile[1].checked = false;                    
+                    this.checked = true;
+                }                
+            }
+        }     
+        boton.onclick=function(){
+           if(caledad(fecha.value)>=18){
+                mensaje.classList.add("universidad");
+                mensaje.classList.remove("colegio");
+           }
+           else{
+            mensaje.classList.add("colegio");
+            mensaje.classList.remove("universidad");
+           }
+            nombre.classList.add("ocultar");
+            edad.classList.add("ocultar");
+            inage.classList.add("ocultar");
+            inname.classList.add("ocultar");
+            boton.classList.add("ocultar");
+            back.classList.remove("ocultar");
+            if (profile[0].checked==true){
+                mujer.classList.add("ocultar");
+                textmujer.classList.add("ocultar");
+                }
+            else if (profile[1].checked==true){
+                hombre.classList.add("ocultar")
+                texthombre.classList.add("ocultar")
+            }
+        }
+        back.onclick=function(){
+            boton.classList.remove("ocultar");
+            back.classList.add("ocultar")
+            mensaje.classList.remove("universidad");
+            mensaje.classList.remove("colegio");
+            nombre.classList.remove("ocultar");
+            edad.classList.remove("ocultar");
+            inage.classList.remove("ocultar");
+            inname.classList.remove("ocultar");
+            hombre.classList.remove("ocultar");
+            mujer.classList.remove("ocultar");
+            textmujer.classList.remove("ocultar")
+            texthombre.classList.remove("ocultar")
+        }
+        function caledad(mostraredad) {
+        var actual = new Date();
+        var cumpleaños = new Date(mostraredad);
+        var año = actual.getFullYear() - cumpleaños.getFullYear();
+        var m = actual.getMonth() - cumpleaños.getMonth();
+             if (m < 0 || (m === 0 && actual.getDate() < cumpleaños.getDate())) {
+            año--;
+          }
+            return año;}
+    </script>
+
+</body>
