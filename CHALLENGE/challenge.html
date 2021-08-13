@@ -173,7 +173,7 @@
     div.mensaje.colegio
     {
         position: absolute;
-        background: url(/imgs/COLEGIO.png) no-repeat center;
+        background: url(imgs/COLEGIO.png) no-repeat center;
         width: 366px;
         height: 280px;
         margin-left: 15px;  
@@ -183,7 +183,7 @@
     div.mensaje.universidad
     {
         position: absolute;
-        background: url(/imgs/UNIVERSIDAD.png) no-repeat center;
+        background: url(imgs/UNIVERSIDAD.png) no-repeat center;
         width: 366px;
         height: 280px;
         margin-left: 15px;  
@@ -215,18 +215,19 @@
 
     </section>
     <script>
+        
         var fecha = document.getElementById("edad");
-        var boton = document.getElementById("verificacion")
-        var mensaje = document.getElementById("mensaje")
-        var nombre = document.getElementById("name")
-        var edad = document.getElementById("age")
-        var inname = document.getElementById("fullname")
-        var inage = document.getElementById("edad")
-        var back = document.getElementById("volver")
-        var hombre =document.getElementById("masculino")
-        var mujer = document.getElementById("femenino")
-        var texthombre = document.getElementById("boy")
-        var textmujer = document.getElementById("girl")
+        var boton = document.getElementById("verificacion");
+        var mensaje = document.getElementById("mensaje");
+        var nombre = document.getElementById("name");
+        var edad = document.getElementById("age");
+        var inname = document.getElementById("fullname");
+        var inage = document.getElementById("edad");
+        var back = document.getElementById("volver");
+        var hombre =document.getElementById("masculino");
+        var mujer = document.getElementById("femenino");
+        var texthombre = document.getElementById("boy");
+        var textmujer = document.getElementById("girl");
 
         const profile = document.querySelectorAll('input[type=checkbox]');   
         // Events
@@ -239,6 +240,7 @@
                 }                
             }
         }     
+    
         boton.onclick=function(){
            if(caledad(fecha.value)>=18){
                 mensaje.classList.add("universidad");
@@ -259,13 +261,13 @@
                 textmujer.classList.add("ocultar");
                 }
             else if (profile[1].checked==true){
-                hombre.classList.add("ocultar")
-                texthombre.classList.add("ocultar")
+                hombre.classList.add("ocultar");
+                texthombre.classList.add("ocultar");
             }
         }
         back.onclick=function(){
             boton.classList.remove("ocultar");
-            back.classList.add("ocultar")
+            back.classList.add("ocultar");
             mensaje.classList.remove("universidad");
             mensaje.classList.remove("colegio");
             nombre.classList.remove("ocultar");
@@ -274,8 +276,8 @@
             inname.classList.remove("ocultar");
             hombre.classList.remove("ocultar");
             mujer.classList.remove("ocultar");
-            textmujer.classList.remove("ocultar")
-            texthombre.classList.remove("ocultar")
+            textmujer.classList.remove("ocultar");
+            texthombre.classList.remove("ocultar");
         }
         function caledad(mostraredad) {
         var actual = new Date();
