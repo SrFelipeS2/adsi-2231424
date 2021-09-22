@@ -9,339 +9,203 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* div.calculator - - - - - - - - - - - - - - - - - - - - */
-        div.calculator {
-            background: url(imgs/calculator/skin.svg) no-repeat center;
-            height: 736px;
-            margin: 0 auto 40px auto;
-            position: relative;
-            transition: all 0.5s ease-out;
-            width: 414px;
-        }
-        /* nav.mode - - - - - - - - - - - - - - - - - - - - */
-
-        div.calculator nav.mode {
-            left: 148px;
-            position: absolute;
-            top: 22px;
-            width: 120px;
-        }
-        div.calculator nav.mode a {
-            display: inline-block;
-            height: 40px;
-            transition: transform 0.2s ease-in;
-            width: 60px;
-        }
-        div.calculator nav.mode a#dark:hover {
-            transform: scale(1.04) translateX(2px);
-        }
-        div.calculator nav.mode a#light:hover {
-            transform: scale(1.04) translateX(-2px);
-        }
-        div.calculator nav.mode a:last-child {
-            margin-left: -5px;
-        }
-        div.calculator nav.mode a#light {
-            background: url(imgs/calculator/bt-light-active.svg) no-repeat center;
-        }
-        div.calculator nav.mode a#dark {
-            background: url(imgs/calculator/bt-dark.svg) no-repeat center;
-        }
-        /* div.display - - - - - - - - - - - - - - - - - - - - */
-        div.calculator div.display {
-            font-family: Roboto;
-            position: absolute;
-            top: 130px;
-            text-align: right;
-            right: 20px;
-            width: 300px;
-        }
-        div.calculator div.display p#operation {
-            color: #3f5f36;
-            font-weight: 300;
-            font-size: 18px;
-            margin: 0;
-        }
-        div.calculator div.display h4#answer {
-            color: #fff;
-            font-weight: 400;
-            font-size: 64px;
-            opacity: 0.8;
-            margin: 0;
-        }
-        /* nav.buttons - - - - - - - - - - - - - - - - - - - - */
-        div.calculator nav.buttons {
-            left: 20px;
-            position: absolute;
-            top: 250px;
-            width: 377px;
-        }
-        div.calculator nav.buttons ul::selection {
-            background-color: transparent;
-        }
-        div.calculator nav.buttons ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        div.calculator nav.buttons ul li {
-            background-color: green;
-            display: inline-block;
-            height: 86px;
-            margin: 0px 6px 5px 0px;
-            opacity: 0.8;
-            transition: transform 0.2s ease-in;
-            width: 86px;
-        }
-        div.calculator nav.buttons ul li:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            opacity: 1;
-        }
-        div.calculator nav.buttons ul li:nth-child(4n) {
-            margin-right: 0;
-        }
-        div.calculator nav.buttons ul li#bt-clear {
-            background: url(imgs/calculator/bt-clear.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-bs {
-            background: url(imgs/calculator/bt-bs.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-pow {
-            background: url(imgs/calculator/bt-pow.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-div {
-            background: url(imgs/calculator/bt-div.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-1 {
-            background: url(imgs/calculator/bt-1.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-2 {
-            background: url(imgs/calculator/bt-2.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-3 {
-            background: url(imgs/calculator/bt-3.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-prod {
-            background: url(imgs/calculator/bt-prod.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-4 {
-            background: url(imgs/calculator/bt-4.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-5 {
-            background: url(imgs/calculator/bt-5.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-6 {
-            background: url(imgs/calculator/bt-6.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-subs {
-            background: url(imgs/calculator/bt-subs.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-7 {
-            background: url(imgs/calculator/bt-7.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-8 {
-            background: url(imgs/calculator/bt-8.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-9 {
-            background: url(imgs/calculator/bt-9.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-add {
-            background: url(imgs/calculator/bt-add.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-per {
-            background: url(imgs/calculator/bt-per.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-0 {
-            background: url(imgs/calculator/bt-0.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-dot {
-            background: url(imgs/calculator/bt-dot.svg) no-repeat center;
-        }
-        div.calculator nav.buttons ul li#bt-equal {
-            background: url(imgs/calculator/bt-equal.svg) no-repeat center;
-        }
-        /* Mode (light/dark) - - - - - - - - - - - - - - - - - - - - */
-        div.calculator.dark {
-            background: url(imgs/calculator/skin-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.mode a#light {
-            background: url(imgs/calculator/bt-light.svg) no-repeat center;
-        }
-        div.calculator.dark nav.mode a#dark {
-            background: url(imgs/calculator/bt-dark-active.svg) no-repeat center;
-        }
-        div.calculator.dark div.display p#operation {
-            color: #d5eddf;
-        }
-        div.calculator.dark div.display h4#answer {
-            color: #000;
-            opacity: 0.6;
-        }
-        div.calculator.dark nav.buttons ul li#bt-clear {
-            background: url(imgs/calculator/bt-clear-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-bs {
-            background: url(imgs/calculator/bt-bs-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-pow {
-            background: url(imgs/calculator/bt-pow-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-div {
-            background: url(imgs/calculator/bt-div-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-1 {
-            background: url(imgs/calculator/bt-1-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-2 {
-            background: url(imgs/calculator/bt-2-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-3 {
-            background: url(imgs/calculator/bt-3-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-prod {
-            background: url(imgs/calculator/bt-prod-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-4 {
-            background: url(imgs/calculator/bt-4-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-5 {
-            background: url(imgs/calculator/bt-5-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-6 {
-            background: url(imgs/calculator/bt-6-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-subs {
-            background: url(imgs/calculator/bt-subs-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-7 {
-            background: url(imgs/calculator/bt-7-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-8 {
-            background: url(imgs/calculator/bt-8-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-9 {
-            background: url(imgs/calculator/bt-9-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-add {
-            background: url(imgs/calculator/bt-add-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-per {
-            background: url(imgs/calculator/bt-per-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-0 {
-            background: url(imgs/calculator/bt-0-dark.svg) no-repeat center;
-        }
-        div.calculator.dark nav.buttons ul li#bt-dot {
-            background: url(imgs/calculator/bt-dot-dark.svg) no-repeat center;
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+    div.calculadora{
+        background: url(imgs/calculator/fondodia.png) no-repeat center;
+        height: 667px;
+        width: 391px;
+        position: relative;
+        margin: 0px auto 40px auto;
+    }
+    div.calculadora nav.modo{
+        left: 155px;
+        position: absolute;
+        top: 16px;
+        width: 120px;
+        
+    }
+    div.calculadora nav.modo a {
+        display: inline-block;
+        height: 40px;
+        transition: transform 0.2s ease-in;
+        width: 40px;
+        
+    }
+    div.calculadora nav.modo a#dia:hover{
+        transform: translateX(8px);
+    }
+    div.calculadora nav.modo a#dia{
+        background: url(imgs/calculator/Rectangle\ 2.png)no-repeat center;
+    }
+    div.calculadora div.pantalla{
+        
+        font-family: 'Roboto', sans-serif;
+        text-align: right;
+        position: absolute;
+        top: 89px;
+        right: 20px;
+        width: 310px;
+    }
+    div.calculadora div.pantalla p#operacion{
+        font-weight: 400; 
+        color: seashell;
+        font-size: 18px;
+        margin: 0px;
+    }
+    div.calculadora div.pantalla h4#respuestas{
+        font-weight: 700;
+        color: seashell0;
+        font-size: 50px;
+        opacity: 0.8;
+        margin: 0px;
+    }
+     div.calculadora nav.botones {
+         border: solid red 1px;
+         position: absolute;
+         top: 196px;
+         width: 390px;
+         height: 470px;
+         
+     }
+     div.calculadora nav.botones ul{
+         list-style: none;
+         margin: 0px;
+         padding: 0px;
+     }
+     div.calculadora nav.botones ul li{
+         background-color: green;
+         margin: 0px 0px -7px 0px;
+         width: 91px;
+         height: 98px;
+         transition: transform 0.2s ease-in;
+         display: inline-block;
+         transform: rotate(0deg);
+     }
+     div.calculadora nav.botones ul li:hover{
+         cursor: pointer;
+         transform: rotate(-19.24deg);
+     }
+     div.calculadora nav.botones ul li:nth-child(4n){
+        
+         transform: none;
+         
+     }
+     
+     div.calculadora nav.botones ul li#BCE{
+        background:url(imgs/calculator/BCE.png) right no-repeat;
+        
+            }
+    div.calculadora nav.botones ul li#BDIV{
+        background:url(imgs/calculator/BDIV.png) center no-repeat;
+        
+            }
+    div.calculadora nav.botones ul li#BPOR{
+        background:url(imgs/calculator/BPOR.png) center no-repeat; 
+        
+            }
+    div.calculadora nav.botones ul li#CLEAR{
+        background:url(imgs/calculator/clear.png)center no-repeat; 
+            }
+    div.calculadora nav.botones ul li#B7{
+        background: url(imgs/calculator/B7.png) center no-repeat; 
+        ;
+            }
+    div.calculadora nav.botones ul li#B8{
+        background:url(imgs/calculator/B8.png)left no-repeat; 
+   
+            }
+    div.calculadora nav.botones ul li#B9{
+        background:url(imgs/calculator/B9.png)left no-repeat; 
+        
+            }
+    div.calculadora nav.botones ul li#BRES{
+        background:url(imgs/calculator/BRES.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#B4{
+        background:url(imgs/calculator/B4.png)left no-repeat; 
+        
+         }
+            div.calculadora nav.botones ul li#B5{
+        background:url(imgs/calculator/B5.png)left no-repeat; 
+       
+            }
+            div.calculadora nav.botones ul li#B6{
+        background:url(imgs/calculator/B6.png)left no-repeat; 
+       
+            }
+            div.calculadora nav.botones ul li#BSUM{
+        background:url(imgs/calculator/BSUM.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#B1{
+        background:url(imgs/calculator/B1.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#B2{
+        background:url(imgs/calculator/B2.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#B3{
+        background:url(imgs/calculator/B3.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#BIGUAL{
+        background:url(imgs/calculator/BIGUAL.png)left no-repeat; 
+         
+            }
+            div.calculadora nav.botones ul li#BPORCENTAJE{
+        background:url(imgs/calculator/BPORCENTAJE.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#B0{
+        background:url(imgs/calculator/B0.png)left no-repeat; 
+            }
+            div.calculadora nav.botones ul li#BPUNTO{
+        background:url(imgs/calculator/BPUNTO.png)left no-repeat; 
+            }
+</style>
 </head>
 <body>
     <main>
         <header>
-            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator JS</h1>
+            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator JS 10-challenge-calculator-Andres</h1>  
         </header>
         <section>
-            <div class="calculator">
-                <nav class="mode">
-                    <a href="javascript:;" id="light"></a>
-                    <a href="javascript:;" id="dark"></a>
-                </nav>
-                <div class="display">
-                    <p id="operation"></p>
-                    <h4 id="answer"></h4>
-                </div>
-                <nav class="buttons">
-                    <ul>
-                        <li id="bt-clear"></li>
-                        <li id="bt-bs"></li>
-                        <li id="bt-pow"></li>
-                        <li id="bt-div"></li>
-                        <li id="bt-1"></li>
-                        <li id="bt-2"></li>
-                        <li id="bt-3"></li>
-                        <li id="bt-prod"></li>
-                        <li id="bt-4"></li>
-                        <li id="bt-5"></li>
-                        <li id="bt-6"></li>
-                        <li id="bt-subs"></li>
-                        <li id="bt-7"></li>
-                        <li id="bt-8"></li>
-                        <li id="bt-9"></li>
-                        <li id="bt-add"></li>
-                        <li id="bt-per"></li>
-                        <li id="bt-0"></li>
-                        <li id="bt-dot"></li>
-                        <li id="bt-equal"></li>     
-                    </ul>
-                </nav>
+            <div class="calculadora">
+            <nav class="modo">
+                <a href="javascript:;" id="dia"></a>
+                <a href="javascript:;" id="noche"></a>
+            </nav>
+            <div class="pantalla">
+                <p id="operacion"></p>
+                <h4 id="respuestas"></h4>
             </div>
+            <nav class="botones">
+                <ul>
+                <li id="BCE"></li>
+                <li id="BDIV"></li>
+                <li id="BPOR"></li>
+                <li id="CLEAR"></li>
+                <li id="B7"></li>
+                <li id="B8"></li>
+                <li id="B9"></li>
+                <li id="BRES"></li>
+                <li id="B4"></li>
+                <li id="B5"></li>
+                <li id="B6"></li>
+                <li id="BSUM"></li>
+                <li id="B1"></li>
+                <li id="B2"></li>
+                <li id="B3"></li>
+                <li id="BIGUAL"></li>
+                <li id="BPORCENTAJE"></li>
+                <li id="B0"></li>
+                <li id="BPUNTO"></li>
+                </ul>
+            </nav>
+
+            </div>
+            
+            
         </section>
     </main>
-
-    <script>
-        // Variables & Constants - - - - - - - - - - - - - - - -
-        var nchars    = 0;
-        var operation = document.getElementById('operation');
-        var anwser    = document.getElementById('anwser');
-
-        const skin  = document.querySelector('div.calculator');
-        const light = document.getElementById('light');
-        const dark  = document.getElementById('dark');
-
-        const bt1 = document.getElementById('bt-1');
-        const bt2 = document.getElementById('bt-2');
-        const bt3 = document.getElementById('bt-3');
-
-        const btClear = document.getElementById('bt-clear');
-
-        // Functions - - - - - - - - - - - - - - - -
-        function validateLength() {
-            if(nchars <= 28) {
-                nchars++;
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        function addCharacter(c) {
-            if(validateLength()) {
-                operation.innerText += c;
-            }
-        }
-        function clearCharacters() {
-            operation.innerText = '';
-            anwser.innerText = '';
-            nchars = 0;
-        }
-
-        // Events - - - - - - - - - - - - - - - -
-        light.onclick = function() {
-            skin.classList.remove('dark');
-        }
-        dark.onclick = function() {
-            skin.classList.add('dark');
-        }
-
-        bt1.onclick = function() {
-            addCharacter(1);
-        }
-        bt2.onclick = function() {
-            addCharacter(2);
-        }
-        bt3.onclick = function() {
-            addCharacter(3);
-        }
-
-        btClear.onclick = function() {
-            clearCharacters();
-        }
-
-    </script>
+    
     
 </body>
 </html>

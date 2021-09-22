@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+         
         section{   
         position: relative;
         background: url(imgs/Frame1refframe.png)center no-repeat;
@@ -195,6 +197,11 @@
     </style>
 </head>
 <body>
+    <main>
+    <header>
+        <h1> <span><a href="index.html">&larr;</a></span> Challenge Conditionals</h1>
+    </header>
+</main>
     <section>
         <div><h1>
         please fiill in the true information 
@@ -214,6 +221,7 @@
         <input class="ocultar" type="button" id="volver" value="BACK">
 
     </section>
+    
     <script>
         
         var fecha = document.getElementById("edad");
@@ -256,6 +264,10 @@
             inname.classList.add("ocultar");
             boton.classList.add("ocultar");
             back.classList.remove("ocultar");
+            if(profile[0].checked||profile[1].checked){
+                alert("please fill in the following fields: \nGender\nfullname\nage");
+            }
+            else{
             if (profile[0].checked==true){
                 mujer.classList.add("ocultar");
                 textmujer.classList.add("ocultar");
@@ -264,6 +276,7 @@
                 hombre.classList.add("ocultar");
                 texthombre.classList.add("ocultar");
             }
+        }
         }
         back.onclick=function(){
             boton.classList.remove("ocultar");
@@ -288,6 +301,7 @@
             año--;
           }
             return año;}
+        
     </script>
 
 </body>
