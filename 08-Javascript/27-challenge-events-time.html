@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Events Time</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        figure.stage {
+            height: 736px;
+            margin: 20px auto;
+            position: relative;
+            width: 414px;
+        }
+        figure.stage.hide {
+            display: none;
+        }
+        figure.stage01 {
+            background: transparent url(imgs/Runner/bg-stage1.png) no-repeat center;
+        }
+        figure.stage02 {
+            background: transparent url(imgs/Runner/bg-stage2.png) no-repeat center;
+            width: 597px;
+            height: 736px;
+        }
+        
+        figure.stage01 div.stars__sm {
+            border-radius: 60px;
+            overflow: hidden;
+            position: absolute;
+            width: 344px; 
+            height: 317px; 
+            left: 34px;
+            top: 54px;
+        }
+        figure.stage01 div.stars__sm div.parallax {
+            background: transparent url(imgs/Runner/stars1.png) repeat-y 0px -716px;
+            height: 634px; 
+            animation: 8s animParallaxSm linear infinite;
+        }
+        @keyframes animParallaxSm {
+            0%   { background-position: 0px -634px; }
+            100% { background-position: 0px 0px;    }
+        }
+        figure.stage01 button#btnPlay {
+            background: url(imgs/Runner/btn.png) no-repeat center;
+            border: none;
+            cursor: pointer;
+            height: 60px;
+            left: 27px;
+            position: absolute;
+            top: 643px;
+            transition: all 0.2s ease-in;
+            width: 360px;
+        }
+        figure.stage01 button#btnPlay:hover {
+            transform: scale(1.05);
+        }
+        figure.stage02 div.info {
+            color: #ffffff;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 24px;
+            position: absolute;
+            text-align: center;
+            width: 38px;
+        }
+        figure.stage02 div#points {
+            left: 494px;
+            top: 631px;
+        }
+        figure.stage02 div#time {
+            left: 494px;
+            top: 385px;
+        }
+        figure.stage02 div#lives {
+            left: 490px;
+            top: 151px;
+        }
+        figure.stage02 div.Runner {
+            height: 97px;
+            width: 60px;
+            position: absolute;
+            left: 174px;
+            top: 520px;
+            transition: all 0.1s linear;
+            animation: 0.2s animRunner ease-in infinite;
+            z-index: 9;
+        }
+        figure.stage02 div.Runner div.structure {
+            background: url(imgs/Runner/Group\ 2.png) no-repeat;
+            height: 128px;
+            width: 61px;
+            animation: animStepsRunner 0.3s steps(2) infinite;
+        }
+        
+        @keyframes animStepsRunner {
+            100% { background-position: -122px; }
+        }
+        @keyframes animRunner {
+            0%, 100% {
+                top: 520px;
+            }
+            50% {
+                top: 516px;
+            }
+        }
+        figure.stage02 div.stars__lg {
+            border-radius: 30px;
+            overflow: hidden;
+            position: absolute;
+            width: 393px; 
+            height: 680px; 
+            left: 20px;
+            top: 30px;
+        }
+        figure.stage02 div.stars__lg div.parallax {
+            background: transparent url(imgs/Runner/stars2.png) repeat-y 0px -1212px;
+            height: 679px; 
+            animation: 8s animParallaxLg linear infinite;
+        }
+        @keyframes animParallaxLg {
+            0%   { background-position: 0px -1212px; }
+            100% { background-position: 0px 0px;    }
+        }
+        figure.stage02 div.banana {
+            background: url(imgs/Runner/banana.png) no-repeat center;
+            /* left: 40px; */
+        }
+        figure.stage02 div.trash {
+            background: url(imgs/Runner/trash.png) no-repeat center;
+            /* left: 184px; */
+        }
+        figure.stage02 div.can {
+            background: url(imgs/Runner/can.png) no-repeat center;
+            /* left: 320px; */
+        }
+        figure.stage02 div.obstaculo {
+            background-size: contain;
+            height: 90px;
+            position: absolute;
+            top: 30px;
+            width: 90px;
+            animation: 2s animobstaculo linear infinite;
+            z-index: 9;
+            left: 19px;
+        }
+        @keyframes animobstaculo {
+            /* 0%   { transform: rotate(0deg);   }
+            100% { transform: rotate(360deg); } */
+            0% { top: 10px; }
+            100% { top: 610px; } 
+        }
+        figure.stage03 {
+                background: url(imgs/Runner/stage-3.png) no-repeat center;
+                width: 414px;
+                height: 736px;
+                margin: 20px auto;
+                position: relative;
+            
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1> <span><a href="index.html">&larr;</a></span> Challenge Events Time</h1>
+        </header>
+        <section>
+            <figure class="stage stage01 animate__animated animate__zoomIn">
+                
+                <div class="stars__sm">
+                    <div class="parallax"></div>
+                </div>
+                <button id="btnPlay"></button>
+            </figure>
+            <figure class="stage stage02 hide animate__animated animate__zoomIn">
+                <div class="obstaculo"></div>
+
+                <div class="Runner">
+                    <div class="structure"></div>
+                </div>
+                <div class="stars__lg">
+                    <div class="parallax"></div>
+                </div>
+                <div class="info" id="points">0</div>
+                <div class="info" id="time">60</div>
+                <div class="info" id="lives">3</div>
+            </figure>
+            <figure class=" stage stage03 hide animate__animated animate__zoomIn"></figure>
+        </section>
+    </main>
+    <audio id="bgMusic" src="/imgs/Runner/audio/bg-sound.mp3"></audio>
+    <audio id="fxGameover" src="/imgs/Runner/audio/game-over.mp3"></audio>
+    
+
+    <script>
+        // Globally Variables & Constants 
+        const btnPlay  = document.getElementById('btnPlay');
+        const stage01  = document.querySelector('figure.stage01');
+        const stage02  = document.querySelector('figure.stage02');
+        const stage03  = document.querySelector('figure.stage03');
+        const Runner = document.querySelector('div.Runner');
+        const obstaculo = document.querySelector('div.obstaculo');
+        
+        
+        const bgMusic    = document.getElementById('bgMusic');
+        const fxRunner = document.getElementById('fxRunner');
+        const gameover    = document.getElementById('fxGameover');
+
+        var points     = document.getElementById('points');
+        var time       = document.getElementById('time');
+        var lives      = document.getElementById('lives');
+        
+
+        const posobstaculo  = [40, 184, 320];
+        const imgobstaculo  = ['banana', 'trash', 'can'];
+        const sizeobstaculo = ['contain', '75%', '50%'];
+
+        /*function sprite(){
+
+           
+                setInterval(function(){
+                    
+                    caracter.classList.
+                    caracter.classList.toggle('structure');
+                    caracter.classList.toggle('structure2');
+                    
+                },500)
+           
+            console.log('algo')
+        };*/
+
+        // Object
+        const game = {
+            // Attributes
+            gpoints: 0,
+            gtime: 60,
+            glives: 3,
+            gpos: 174,
+            // Methods
+            playRunner: function() {
+                this.changeStage();  
+                this.countDownTime(); 
+                this.randomobstaculos();
+                this.playMusic();
+                this.colisionNave();
+                this.playGameover();
+              
+                
+                
+            },
+            changeStage: function() {
+                stage01.classList.add('animate__zoomOut');
+                setTimeout(function() {
+                    stage01.classList.add('hide');
+                    stage02.classList.remove('hide');
+                },500);
+            },         
+            countDownTime: function() {
+                let seti = setInterval(function() {
+                    if (game.gtime %10 == 0) {
+                        if (game.gtime != 60) {
+                            game.gpoints += 10;
+                            points.innerText = game.gpoints;
+                        }
+                    }
+                    if (game.gtime < 1) {
+                        ///alert('The Game is Over');
+                        time.innerText = '0';
+                        clearInterval(seti);
+                    } else {
+                        time.innerText = parseInt(game.gtime--);
+                    }
+                }, 2000);
+            },
+            moveRunner: function(event) {
+                //console.log(event.keyCode);
+                // left (37)
+                if(event.keyCode == 37) {
+                    if ( game.gpos > 44) {
+                        game.gpos -= 130;
+                        Runner.style.left = game.gpos + 'px';
+                       
+                    }
+                }
+                // right (39)
+                if(event.keyCode == 39) {
+                    if ( game.gpos < 304) {
+                        game.gpos += 130;
+                        Runner.style.left = game.gpos + 'px';
+                        
+                    }
+                }
+            },
+            randomobstaculos: function() {
+                let setiRand = setInterval(function() {
+                    let rnd1 = Math.floor(Math.random() * posobstaculo.length );
+                    let rnd2 = Math.floor(Math.random() * imgobstaculo.length );
+                    let rnd3 = Math.floor(Math.random() * sizeobstaculo.length );
+
+                    obstaculo.style.left = posobstaculo[rnd1] + 'px';
+                    obstaculo.classList.remove('banana', 'trash', 'can');
+                    obstaculo.classList.add(imgobstaculo[rnd2]);
+                    obstaculo.style.backgroundSize = sizeobstaculo[rnd3];
+                    //console.log(rnd1 + " - " + rnd2);
+                }, 500);
+            },
+            playMusic: function() {
+                bgMusic.play();
+                bgMusic.loop = true;
+                bgMusic.volume = 0.1;
+            },
+            playGameover: function() {
+                fxGameover.pause();
+                fxGameover.volume = 0.1;
+            },
+            colisionNave: function() {
+                let setIn = setInterval(function() {
+                    RunnerTop = Runner.offsetTop;
+                    RunnerLeft = Runner.offsetLeft;
+                    RunnerRigth = Number(Runner.offsetLeft) + Number(Runner.offsetWidth);
+                    RunnerBottom = Number(Runner.offsetTop) + Number(Runner.offsetHeight);
+
+                    obstaculoTop = obstaculo.offsetTop;
+                    obstaculoLeft = obstaculo.offsetLeft;
+                    obstaculoRigth = Number(obstaculo.offsetLeft) + Number(obstaculo.offsetWidth);
+                    obstaculoBottom = Number(obstaculo.offsetTop) + Number(obstaculo.offsetHeight);
+
+                    if (RunnerRigth  > obstaculoLeft   && 
+                        RunnerLeft   < obstaculoRigth  && 
+                        RunnerTop    < obstaculoBottom && 
+                        RunnerBottom > obstaculoTop ) {
+                        game.glives -= 1;
+                        lives.innerText = game.glives;
+                
+                        if(game.glives == 0){
+                            setTimeout(function() {
+                                stage02.classList.add('hide');
+                                stage03.classList.remove('hide');
+                                bgMusic.pause();
+                                fxGameover.play();
+                               
+                            },500);
+                        }
+                    }
+                }, 810)
+            }
+        }
+        // Events
+        btnPlay.onclick = function() {
+            game.playRunner();
+         
+        }
+        document.onkeydown = function(event) {
+            game.moveRunner(event);
+        }
+
+    </script>
+    
+</body>
+</html>
