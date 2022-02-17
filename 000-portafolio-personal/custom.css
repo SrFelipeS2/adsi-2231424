@@ -1,11 +1,25 @@
 #navbarSupportedContent{
     font-family: 'Open Sans', sans-serif;
 }
-img{
-    width: 350px;
-    height: 400px;
+
+div.background{
+    background-image: url(./imgs/Frame\ 1.png);
+     width: 100%;
+     height: auto;
+     background-size: cover;  
+    
 }
-img#img1{
-    width: 350px;
-    height: 400px;
+#margin{
+    border: red 1px solid;
+}
+div.position{
+    
+    margin-top: 180px;
+}
+div.margin1{
+    margin-left: 319px;
+    margin-top: 0px;
+}
+p.lineheigth{
+ line-height: 25px;
 }
