@@ -1,25 +1,46 @@
 #navbarSupportedContent{
     font-family: 'Open Sans', sans-serif;
 }
-
+/*fondo gris, abarca la barra de navegacion y la caja que contiene el texto y la foto*/
 div.background{
-    background-image: url(./imgs/Frame\ 1.png);
+    background-image: url(./imgs/Frame\ 1.svg);
      width: 100%;
-     height: auto;
+     height: 200px;
      background-size: cover;  
     
 }
 #margin{
     border: red 1px solid;
 }
+/*posicion de la caja despues del navbar, solo texto no imagen*/
 div.position{
     
-    margin-top: 180px;
+    margin-top: 200px;
 }
-div.margin1{
-    margin-left: 319px;
-    margin-top: 0px;
+/*position imagen hero*/
+#position1{
+    height: 100%;
 }
+div img.img1{
+    background-size: cover;
+}
+
+/*background why you hire me?*/
+div.background2{
+    background-image: url(./imgs/Frame\ 2.svg);
+     width: 100%;
+     height: auto;
+     background-size: cover;  
+    
+}
+/*espacia interlineado de la caja */
 p.lineheigth{
  line-height: 25px;
+}
+/*justificacion del texto antepenultima seccion, services*/
+div p.justify {
+  text-align: justify;  
+}
+div.bgb{
+    background-color: #414443;
 }
