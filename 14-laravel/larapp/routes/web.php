@@ -14,5 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    return view('welcome'); 
+    
+});
+Route::get('hello', function () {
+    
+    return "<h1> Hello, this is a simple route¡ </h1>"; 
+    
+});
+
+Route::get('examples/users', function () {
+    $users = App\Models\User::all();
+    dd($users); 
+    //return var_dump($users);
+});
+
+Route::get('examples/challenges', function () {
+    $users = App\Models\User::all();
+    return view('challenges')->with('users', $users);
 });
