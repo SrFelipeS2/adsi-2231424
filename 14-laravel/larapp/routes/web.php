@@ -14,23 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
-    return view('welcome'); 
-    
-});
-Route::get('hello', function () {
-    
-    return "<h1> Hello, this is a simple route¡ </h1>"; 
-    
+    return view('welcome');
 });
 
-Route::get('examples/users', function () {
-    $users = App\Models\User::all();
-    dd($users); 
-    //return var_dump($users);
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('examples/challenges', function () {
-    $users = App\Models\User::all();
-    return view('challenges')->with('users', $users);
-});
+require __DIR__.'/auth.php';

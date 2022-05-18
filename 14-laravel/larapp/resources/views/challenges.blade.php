@@ -42,6 +42,9 @@
                 <th>ID</th>
                 <th>Full Name</th>
                 <th>Email</th>
+                <th>Birthdate</th>
+                <th>Age</th>
+                <th>created date</th>
             </tr>
         </thead>
         <tbody>
@@ -50,10 +53,14 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->fullname}}</td>
                 <td>{{$user->email}}</td>
+                <td>{{$user->birthdate}}</td>
+                <td>{{now()->diffInYears($user->birthdate)}}</td>
+                <td>{{now()->diffInWeeks($user->created_at)}}</td>
+
             </tr>
             @endforeach
         </tbody>
     </table>
 </body>
 </html>
-    
+
