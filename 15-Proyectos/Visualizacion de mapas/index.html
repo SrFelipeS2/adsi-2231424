@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAkhD8OAtDdA0UgmQmPwjOeUburLxQVI8&callback=initMap"></script>
+    <script>
+        let map;
+        let marker;
+        let watchID;
+        let geoloc;
+
+        function initMap() {
+            const myLatLng = { lat: -25.363, lng: 131.044 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: myLatLng,
+            });
+            marker = new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "hello world"
+            });
+
+            getPosition();
+        }
+        function getPosition() {
+            if (navigator.geolocation) {
+                var options = { timeout: 60000 };
+                geoloc = navigator.geolocation;
+                watchID = geoloc.watchPosition(showLocationOnMap, errorHandler, options);
+            } else {
+                alert(" lo sentimos el explorador no soprta geolocalizacion")
+            }
+        }
+        function showLocationOnMap(position) {
+            var latitud = position.coords.latitude;
+            var longitud = position.coords.longitude;
+            console.log("latitud: " + latitud + "longitud: " + longitud);
+
+            const myLatLng = { lat: latitud, lng: longitud };
+            marker.setPosition(myLatLng);
+            map.setCenter(myLatLng);
+        }
+        function errorHandler(err){
+            if(err.code==1){
+                alert("error: acceso denegado");
+            }else if(err.code == 2){
+                alert("Error: position no existe no se encuentra")
+            }
+        } 
+    </script>
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>
